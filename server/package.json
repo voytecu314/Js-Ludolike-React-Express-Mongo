@@ -1,0 +1,27 @@
+{
+  "name": "js-ludolike-backend",
+  "version": "1.0.0",
+  "description": "Backend for JS learning board game.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voytecu314/Js-Ludolike-React-Express-Mongo.git"
+  },
+  "keywords": [
+    "js",
+    "react",
+    "express",
+    "mongo",
+    "board",
+    "game"
+  ],
+  "author": "Wojciech Urbanski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voytecu314/Js-Ludolike-React-Express-Mongo/issues"
+  },
+  "homepage": "https://github.com/voytecu314/Js-Ludolike-React-Express-Mongo#readme"
+}
