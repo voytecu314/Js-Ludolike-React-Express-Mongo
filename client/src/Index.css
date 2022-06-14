@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+#left-info-board, #right-board-game {
+  display: flex;
+  flex-direction: column;
+}
+
+#left-info-board {
+  flex-basis: 20%;
+}
+
+#right-board-game {
+  flex-basis: 80%;
+}
+
+.one-third-of-board {
+  flex-basis: 33%;
+  border: 1px solid black;
+}
+
+#starting-base {
+  display: grid;
+  place-items: center;
+}
+
+#starting-grid {
+  width: 85%;
+  height: 85%;
+  border: 1px solid black;
+}
+
+.go-right, .go-left {
+  display: flex;
+  flex-basis: 25%;
+}
+
+.go-left {
+  flex-direction: row-reverse;
+}
+
+.flex-tracks {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  display: grid;
+  place-items: center;
+  flex-basis: 10%;
+  border: 1px solid black;
+}
