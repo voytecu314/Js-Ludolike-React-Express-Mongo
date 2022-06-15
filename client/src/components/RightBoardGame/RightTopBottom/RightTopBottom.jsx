@@ -2,8 +2,8 @@ import AllTheBoardTracksTwoRows from "./AllTheBoardTracksTwoRows/AllTheBoardTrac
 const RightTopBottom = () => {
   return (
     <div className='one-third-of-board flex-tracks'>
-      <AllTheBoardTracksTwoRows />
-      <AllTheBoardTracksTwoRows />
+      <AllTheBoardTracksTwoRows fields_no={10}/>
+      <AllTheBoardTracksTwoRows fields_no={10}/>
     </div>
   )
 }

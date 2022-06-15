@@ -1,8 +1,7 @@
-import React from 'react'
 
-const Field = () => {
+const Field = ({fields_no}) => {
   return (
-    <div className='field'>Field</div>
+    <div className={`field field-${fields_no}`}>Field</div>
   )
 }
 
