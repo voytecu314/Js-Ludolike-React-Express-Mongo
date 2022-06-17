@@ -1,4 +1,4 @@
-import React from 'react'
+import './dice.css';
 
 const Dice = () => {
   return (

@@ -1,11 +1,14 @@
-import LeftInfoBoard from './components/LeftInfoBoard/LeftInfoBoard.jsx';
-import RightBoardGame from './components/RightBoardGame/RightBoardGame.jsx';
+import { useState } from "react";
+import Game from "./components/Game/Game.jsx";
+import HomeLoginModal from "./components/HomeLoginModal/HomeLoginModal.jsx";
 
 function App() {
+
+  const [authenticated, setAuthenticated] = useState(false);
+
   return (
     <div className="App">
-      <LeftInfoBoard />
-      <RightBoardGame />
+      {authenticated?<Game />:<HomeLoginModal />}
     </div>
   );
 }
