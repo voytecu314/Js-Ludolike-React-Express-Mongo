@@ -11,3 +11,12 @@
     gap: 2%;
     grid-template-columns: 1fr 1fr;
 }
+
+#passphrase-div {
+    text-align: center;
+}
+
+#passphrase {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blanchedalmond;
+}

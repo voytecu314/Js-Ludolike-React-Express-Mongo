@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useContext } from "react";
+import MyContext from "./Context/MyContext.js";
 import Game from "./components/Game/Game.jsx";
 import HomeLoginModal from "./components/HomeLoginModal/HomeLoginModal.jsx";
 
 function App() {
 
-  const [authenticated, setAuthenticated] = useState(false);
+  const { authenticated } = useContext(MyContext);
 
   return (
     <div className="App">

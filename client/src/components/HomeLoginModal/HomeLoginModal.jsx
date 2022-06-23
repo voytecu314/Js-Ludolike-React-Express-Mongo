@@ -1,29 +1,32 @@
+import { useState, useContext } from 'react';
+import MyContext from '../../Context/MyContext.js';
+import Passphrase from './PassPhrase/Passphrase.jsx';
+import CreateNewGame from './CreateNewGame/CreateNewGame.jsx';
+import ConnectWithPassphrase from './ConnectWithPassphrase/ConnectWithPassphrase.jsx';
 import './home_login_modal.css';
 
 const HomeLoginModal = () => {
 
-  const testPost = (e) => {
-    fetch('http://localhost:5001/test',{
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({
-        name: e.target.nextSibling.value,
-        position: e.target.nextSibling.nextSibling.value
-                })
-    })
-    .then(res=>res.json())
-    .then(console.log)
-    .catch(console.log);
+  const { passphrase } = useContext(MyContext);
+
+  const [btnClicked, setBtnClicked] = useState(false);
+
+  const clickOnBtn = (e) => {
+    setBtnClicked(e.target.innerText);
   }
 
   return (
     <div id="home-login-modal">
       <h1>JS Board Game</h1>
-
+      {passphrase && <Passphrase passphrase={passphrase}/>}
       <div id="modal-buttons">
-        <button onClick={testPost}>Create new game</button>
-        <input type="text" /><input type="number" />
-        <button>Connect with passphrase</button>
+      { btnClicked ? 
+        btnClicked === 'Create new game' ?
+        <CreateNewGame setBtnClicked={setBtnClicked}/>: <ConnectWithPassphrase setBtnClicked={setBtnClicked} /> :
+        <>
+        <button onClick={clickOnBtn}>Create new game</button>
+        <button onClick={clickOnBtn}>Connect with passphrase</button>
+        </>}
       </div>
       
     </div>

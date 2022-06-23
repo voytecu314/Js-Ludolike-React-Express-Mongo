@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
 
-const test = mongoose.Schema({
+const players = mongoose.Schema({
     name: String,
     position: Number
+});
+
+const test = mongoose.Schema({
+    hash: String,
+    players: [players]
 });
 
 const testModel = mongoose.model('test', test);
