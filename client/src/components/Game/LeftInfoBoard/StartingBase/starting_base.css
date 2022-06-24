@@ -1,0 +1,11 @@
+#starting-base {
+    display: grid;
+    place-items: center;
+  }
+  
+  #starting-grid {
+    width: 85%;
+    height: 85%;
+    border: 1px solid black;
+  }
+  

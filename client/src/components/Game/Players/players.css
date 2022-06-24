@@ -1,0 +1,4 @@
+#players-div {
+    display: grid;
+    place-items: center;
+}
