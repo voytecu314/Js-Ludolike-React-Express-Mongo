@@ -11,8 +11,13 @@ const ConnectWithPassphrase = ({setBtnClicked}) => {
   
 
   return (<>
+  
     <button onClick={()=>setBtnClicked(false)}>&#x2190; Go back</button>
-    <div>ConnectWithPassphrase</div>
+    <div>
+     <input type="text" placeholder="Input passphrase" />
+     <button>Connect</button> 
+    </div>
+    
   </>)
 }
 

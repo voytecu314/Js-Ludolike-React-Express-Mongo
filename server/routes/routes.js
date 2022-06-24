@@ -1,13 +1,12 @@
 const express = require('express');
 const checkOrigin = require('../middleware/checkOrigin.js');
 const getPassphrase = require('../controllers/passphrase.js');
+const createGame = require('../controllers/createGame.js');
 
 const router = express.Router();
 
 router.get('/getPass',checkOrigin, getPassphrase);
 
-router.post('/createGame', (req, res)=>{
-    res.status(200).json({response: req.body})
-});
+router.post('/createGame', createGame);
 
 module.exports = router;

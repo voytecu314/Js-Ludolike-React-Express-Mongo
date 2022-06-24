@@ -6,6 +6,7 @@ const socket = io('http://localhost:5001/');
 
 const MyProvider = ({children}) => {
     const [authenticated, setAuthenticated] = useState(false);
+    const [gameState, setGameState] = useState({});
     const [response, setResponse] = useState("");
     const [passphrase, setPassphrase] = useState(null);
 
@@ -22,7 +23,9 @@ const MyProvider = ({children}) => {
                                passphrase,
                                setPassphrase,
                                authenticated,
-                               setAuthenticated}}>
+                               setAuthenticated,
+                               gameState,
+                               setGameState}}>
         {children}
     </MyContext.Provider>
   )

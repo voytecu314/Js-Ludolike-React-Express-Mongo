@@ -4,7 +4,7 @@ import hashFunction from '../../../helpers/bcrypt';
 
 const Passphrase = ({passphrase}) => {
 
-  const { setAuthenticated } = useContext(MyContext);
+  const { setAuthenticated, setGameState } = useContext(MyContext);
 
   const promptName = (notEmpty) => {
     while(!notEmpty){
@@ -30,7 +30,7 @@ const Passphrase = ({passphrase}) => {
       body: JSON.stringify({hash, name})
     })
     .then(res=>res.json())
-    .then(console.log)
+    .then(data=>setGameState(data))
     .catch(console.log);
   }
 

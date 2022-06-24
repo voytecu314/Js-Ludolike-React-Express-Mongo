@@ -5,9 +5,9 @@ const RightBoardGame = () => {
   return (
     <section id="right-board-game">
       
-      <RightTopBottom />
+      <RightTopBottom pos={'top'}/>
       <RightMiddle />
-      <RightTopBottom />
+      <RightTopBottom pos={'bottom'}/>
 
     </section>
   )

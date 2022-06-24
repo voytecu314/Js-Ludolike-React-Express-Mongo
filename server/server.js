@@ -2,7 +2,6 @@ const express =  require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const testModel = require('./models/testModel.js');
 const routes = require('./routes/routes.js');
 const app = express();
 //const http = require('http').Server(app);
@@ -36,14 +35,6 @@ app.use(cors({
     origin: 'http://localhost:3000'
 }));
 app.use('/', routes);
-
-app.post('/test', async (req, res) => {
-
-    const test = new testModel(req.body);
-    await test.save();
-
-    res.json(test);
-});
 
 server.listen(port,()=>{
 
