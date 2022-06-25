@@ -11,7 +11,7 @@ const CreateNewGame = ({setBtnClicked}) => {
     .then(answer=>setPassphrase(answer.passphrase))
     .catch(err=>setPassphrase(err.message + ' - please try again later'));
   }
-
+//please fix error -> do error modal
   const togglePassphrase = () => {
     setBtnClicked(false);
     setPassphrase(null);

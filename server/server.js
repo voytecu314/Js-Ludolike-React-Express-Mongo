@@ -10,7 +10,7 @@ const server = http.createServer(app);
 const socketIo = require("socket.io");
 const io = socketIo(server, {
     cors: {
-        origin: ['http://localhost:3000']
+        origin: ['http://localhost:3000','http://localhost:3001']
     }
 });
 
@@ -32,7 +32,7 @@ mongoose.connection.on('disconnected', () => { console. log('DB-> lost connectio
 app.use(express.json({extended:true}));
 app.use(express.urlencoded({extended:true}));
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin: ['http://localhost:3000','http://localhost:3001']
 }));
 app.use('/', routes);
 

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import MyContext from '../../../Context/MyContext';
-import hashFunction from '../../../helpers/bcrypt';
+import hashFunction from '../../../helpers/digestCrypto.js';
 
 const Passphrase = ({passphrase}) => {
 
@@ -14,11 +14,12 @@ const Passphrase = ({passphrase}) => {
     return name;
   }
 
-  const takePassphrase = (e) => {
+  const takePassphrase = async (e) => {
     
     setAuthenticated(true);
     localStorage.setItem('JSBoardGame', JSON.stringify({passphrase}));
-    const hash = hashFunction(passphrase);
+    const hash = await hashFunction(passphrase);
+    console.log(hash);
     
     const name = !e.target.previousSibling.value?
     promptName(e.target.previousSibling.value):
